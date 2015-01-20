@@ -1,0 +1,121 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView android:id="@+id/LblMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <Button android:id="@+id/BtnBotonSimple"
+        android:text="@string/click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LblMensaje" />
+
+    <Button android:id="@+id/BtnBotonMasImagen"
+        android:text="@string/click"
+        android:drawableLeft="@drawable/ic_estrella"
+        android:drawablePadding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/BtnBotonSimple" />
+
+    <ToggleButton android:id="@+id/BtnToggle"
+        android:textOn="@string/on"
+        android:textOff="@string/off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/BtnBotonMasImagen" />
+
+    <Switch android:id="@+id/BtnSwitch"
+        android:textOn="@string/on"
+        android:textOff="@string/off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/BtnToggle"/>
+
+    <ImageButton android:id="@+id/BtnImagen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/icono_ok"
+        android:src="@drawable/ic_estrella"
+        android:layout_below="@id/BtnSwitch" />
+
+    <ToggleButton android:id="@+id/BtnPersonalizado"
+        android:textOn="@string/on"
+        android:textOff="@string/off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toggle_style"
+        android:layout_below="@id/BtnImagen" />
+
+    <LinearLayout
+        android:id="@+id/BarraBtnSinBorde"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:divider="?android:dividerVertical"
+        android:dividerPadding="6dp"
+        android:layout_below="@id/BtnPersonalizado">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:text="@string/texto_de_prueba"/>
+
+        <ImageButton android:id="@+id/BtnSinBorde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/icono_ok"
+            android:src="@drawable/ic_estrella"
+            style="?android:borderlessButtonStyle"/>
+
+    </LinearLayout>
+
+    <com.getbase.floatingactionbutton.AddFloatingActionButton
+        android:id="@+id/semi_transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fab:fab_plusIconColor="#FFFFFF"
+        fab:fab_colorNormal="#FF0000"
+        fab:fab_colorPressed="#990000"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/BarraBtnSinBorde" />
+
+    <LinearLayout
+        android:id="@+id/BarraBotones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        style="?android:attr/buttonBarStyle">
+
+        <Button android:id="@+id/BtnAceptar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Aceptar"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button android:id="@+id/BtnCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Cancelar"
+            style="?android:attr/buttonBarButtonStyle" />
+
+    </LinearLayout>
+
+</RelativeLayout>
