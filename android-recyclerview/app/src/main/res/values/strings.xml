@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RecyclerView</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="insertar">Insertar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="mover">Mover</string>
+
+</resources>
