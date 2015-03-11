@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CardView</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="tarjeta_1">Tarjeta 1</string>
+    <string name="tarjeta_2">Tarjeta 2</string>
+
+</resources>
