@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Toolbar</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_buscar">Buscar</string>
+    <string name="action_nuevo">Nuevo</string>
+    <string name="prueba">Prueba</string>
+    <string name="checkbox">Checkbox</string>
+</resources>
