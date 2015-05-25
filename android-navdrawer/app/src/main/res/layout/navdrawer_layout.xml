@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<net.sgoliver.android.navigationdrawer.ScrimInsetsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrimInsetsFrameLayout"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@android:color/white"
+    android:elevation="10dp"
+    android:fitsSystemWindows="true"
+    app:insetForeground="#4000"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/navheader"
+            android:scaleType="centerCrop" />
+
+        <ListView
+            android:id="@+id/navdrawerlist"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:divider="@null"
+            android:choiceMode="singleChoice" />
+
+    </LinearLayout>
+
+</net.sgoliver.android.navigationdrawer.ScrimInsetsFrameLayout>

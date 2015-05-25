@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Navigation Drawer</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="openDrawer">Menu abierto</string>
+    <string name="closeDrawer">Menu cerrado</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment1">Fragment 1</string>
+    <string name="fragment3">Fragment 3</string>
+    <string name="fragment2">Fragment 2</string>
+</resources>
