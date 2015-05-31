@@ -1,7 +1,8 @@
 package net.sgoliver.android.botones;
 
-import android.support.v7.app.ActionBarActivity;
+import android.support.design.widget.FloatingActionButton;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,7 +12,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     private TextView lblMensaje;
     private Button btnBotonSimple;
@@ -23,6 +24,7 @@ public class MainActivity extends ActionBarActivity {
     private ImageButton btnSinBorde;
     private Button btnAceptar;
     private Button btnCancelar;
+    private FloatingActionButton fabButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,6 +122,10 @@ public class MainActivity extends ActionBarActivity {
                 lblMensaje.setText("Botón Cancelar pulsado!");
             }
         });
+
+        fabButton = (FloatingActionButton)findViewById(R.id.fab);
+        fabButton.setBackgroundTintList(
+                getResources().getColorStateList(R.color.fab_color));
     }
 
     @Override
