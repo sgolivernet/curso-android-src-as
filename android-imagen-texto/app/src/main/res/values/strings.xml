@@ -9,5 +9,6 @@
     <string name="settext">SetText</string>
     <string name="usuario">Usuario</string>
     <string name="escribe_algo">Escribe algo:</string>
+    <string name="comprobar">Comprobar</string>
 
 </resources>

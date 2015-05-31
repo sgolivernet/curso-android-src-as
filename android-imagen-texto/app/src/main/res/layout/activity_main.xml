@@ -44,11 +44,31 @@
         android:layout_toLeftOf="@id/BtnNegrita"
         android:text="@string/settext" />
 
+    <android.support.design.widget.TextInputLayout
+    android:id="@+id/TiLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/BtnSetText" >
+
+    <EditText android:id="@+id/TxtInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escribe un número par" />
+
+</android.support.design.widget.TextInputLayout>
+
+    <Button android:id="@+id/BtnInputLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TiLayout"
+        android:layout_alignParentRight="true"
+        android:text="@string/comprobar" />
+
     <ImageView android:id="@+id/ImgFoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_launcher"
-        android:layout_below="@id/BtnNegrita"
+        android:layout_below="@id/BtnInputLayout"
         android:layout_alignParentRight="true"
         android:contentDescription="@string/imagen_ejemplo" />
 

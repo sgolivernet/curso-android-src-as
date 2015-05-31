@@ -1,5 +1,6 @@
 package net.sgoliver.android.imagenytexto;
 
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -16,6 +17,10 @@ public class MainActivity extends ActionBarActivity {
     private EditText txtTexto;
     private Button btnNegrita;
     private Button btnSetText;
+
+    private TextInputLayout txtInputLayout;
+    private EditText txtInput;
+    private Button btnComprobar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +69,25 @@ public class MainActivity extends ActionBarActivity {
 
                 //Obtiene el texto CON etiquetas de formato HTML
                 //String aux2 = Html.toHtml(txtTexto.getText());
+            }
+        });
+
+        //TextInputLayout
+        txtInputLayout = (TextInputLayout)findViewById(R.id.TiLayout);
+        txtInputLayout.setErrorEnabled(true);
+
+        txtInput = (EditText)findViewById(R.id.TxtInput);
+
+        btnComprobar = (Button)findViewById(R.id.BtnInputLayout);
+        btnComprobar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String num = txtInput.getText().toString();
+
+                if(num.isEmpty() || Integer.parseInt(num)%2 != 0)
+                    txtInputLayout.setError("Error: No es un número par!");
+                else
+                    txtInputLayout.setError(null);
             }
         });
     }
