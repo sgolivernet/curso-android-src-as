@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Snackbar</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="snackbar_simple">Snackbar simple</string>
+    <string name="snackbar_accion">Snackbar con acción</string>
+</resources>
