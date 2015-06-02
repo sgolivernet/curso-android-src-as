@@ -1,18 +1,16 @@
 package net.sgoliver.android.toolbar3;
 
-import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
+public class MiFragmentPagerAdapter extends FragmentPagerAdapter {
     final int PAGE_COUNT = 6;
-    private String tabTitles[] = new String[] { "Tab1", "Pestaña2", "Tab3", "Pestaña4", "Tab5", "Pestaña6"};
-    private Context context;
+    private String tabTitles[] =
+            new String[] {"Tab Uno", "Tab Dos", "Tab Tres", "Tab Cuatro", "Tab Cinco", "Tab Seis"};
 
-    public SampleFragmentPagerAdapter(FragmentManager fm, Context context) {
+    public MiFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
-        this.context = context;
     }
 
     @Override
@@ -43,7 +41,6 @@ public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        // Generate title based on item position
         return tabTitles[position];
     }
 }

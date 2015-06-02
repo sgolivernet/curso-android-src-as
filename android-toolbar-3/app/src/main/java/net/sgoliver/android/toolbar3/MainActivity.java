@@ -1,6 +1,7 @@
 package net.sgoliver.android.toolbar3;
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -50,37 +51,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Tabs
+        //Tabs + ViewPager
 
         //Establecer el PageAdapter del componente ViewPager
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
-        viewPager.setAdapter(new SampleFragmentPagerAdapter(
-                getSupportFragmentManager(),
-                MainActivity.this));
+        viewPager.setAdapter(new MiFragmentPagerAdapter(
+                getSupportFragmentManager()));
 
-        SlidingTabLayout slidingTabLayout = (SlidingTabLayout) findViewById(R.id.slidingtabs);
-
-        //Centrar e igualar ancho de las pestañas
-        //slidingTabLayout.setDistributeEvenly(true);
-
-        //Establecer el layout de la pestaña
-        slidingTabLayout.setCustomTabView(R.layout.tab_view, 0);
-
-        //Establecer el color de los indicadores y divisores
-        slidingTabLayout.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
-            @Override
-            public int getIndicatorColor(int position) {
-                return getResources().getColor(R.color.color_primary_light);
-            }
-
-            @Override
-            public int getDividerColor(int position) {
-                return getResources().getColor(R.color.color_primary_light);
-            }
-        });
-
-        //Asignar el ViewPager al SlidingTabLayout
-        slidingTabLayout.setViewPager(viewPager);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.appbartabs);
+        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+        tabLayout.setupWithViewPager(viewPager);
     }
 
     @Override
