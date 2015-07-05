@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">NavigationView</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="seccion_1">Sección 1</string>
+    <string name="seccion_2">Sección 2</string>
+    <string name="otras_opciones">Otras opciones</string>
+    <string name="opcion_1">Opción 1</string>
+    <string name="opcion_2">Opción 2</string>
+    <string name="seccion_3">Sección 3</string>
+    <string name="usuario">Usuario</string>
+    <string name="menu_abierto">Menu Abierto</string>
+    <string name="menu_cerrado">Menu Cerrado</string>
+    <string name="fragment1">Fragment 1</string>
+    <string name="fragment2">Fragment 2</string>
+    <string name="fragment3">Fragment 3</string>
+</resources>
