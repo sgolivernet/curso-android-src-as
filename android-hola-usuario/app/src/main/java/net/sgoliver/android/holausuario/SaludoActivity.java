@@ -1,12 +1,12 @@
 package net.sgoliver.android.holausuario;
 
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class SaludoActivity extends ActionBarActivity {
+public class SaludoActivity extends AppCompatActivity {
 
     private TextView txtSaludo;
 
