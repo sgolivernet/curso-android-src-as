@@ -2,6 +2,7 @@ package net.sgoliver.android.bottomsheets;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomSheetBehavior;
+import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnExpBottomSheet;
     private Button btnConBottomSheet;
     private Button btnOcuBottomSheet;
+    private Button btnModalBottomSheet;
     private LinearLayout bottomSheet;
 
     @Override
@@ -90,6 +92,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSlide(@NonNull View bottomSheet, float slideOffset) {
                 Log.i("BottomSheets", "Offset: " + slideOffset);
+            }
+        });
+
+        btnModalBottomSheet = (Button)findViewById(R.id.btnModalBottomSheet);
+        btnModalBottomSheet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BottomSheetDialogFragment bsdFragment =
+                        MiBottomSheetDialogFragment.newInstance();
+
+                bsdFragment.show(
+                        MainActivity.this.getSupportFragmentManager(), "BSDialog");
             }
         });
     }
