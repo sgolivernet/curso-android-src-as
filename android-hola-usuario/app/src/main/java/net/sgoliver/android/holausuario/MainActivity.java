@@ -3,8 +3,6 @@ package net.sgoliver.android.holausuario;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Obtenemos una referencia a los controles de la interfaz
-        txtNombre = (EditText)findViewById(R.id.TxtNombre);
-        btnAceptar = (Button)findViewById(R.id.BtnAceptar);
+        txtNombre = (EditText)findViewById(R.id.txtNombre);
+        btnAceptar = (Button)findViewById(R.id.btnAceptar);
 
         //Implementamos el evento click del botón
         btnAceptar.setOnClickListener(new View.OnClickListener() {
@@ -42,27 +40,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }
